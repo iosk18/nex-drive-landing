@@ -503,7 +503,27 @@
         }
 
         /* ─── 4. CASOS DE TRABAJO ──────────────────────────────── */
-        #casos { background: var(--cream); }
+        /* Transiciones suaves entre secciones con gradiente */
+        #quienes {
+            background: linear-gradient(to bottom, #FAFAF8 0%, var(--cream) 72px, var(--cream) 100%);
+        }
+        #servicios {
+            background: linear-gradient(to bottom, var(--cream) 0%, var(--white) 72px, var(--white) 100%);
+        }
+        #casos {
+            background: linear-gradient(to bottom, var(--white) 0%, var(--cream) 72px, var(--cream) 100%);
+        }
+        #video {
+            background: linear-gradient(to bottom, var(--cream) 0%, var(--cream-dark) 72px, var(--cream-dark) 100%);
+        }
+
+        /* Alineación izquierda para secciones alternadas */
+        .head-left {
+            text-align: left;
+        }
+        .head-left .section-lead {
+            margin: 0;
+        }
 
         .casos-head {
             text-align: center;
@@ -917,6 +937,22 @@
             color: #444;
         }
 
+        .footer-section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.5px;
+            margin-bottom: 2.8rem;
+            padding-bottom: 1.4rem;
+            border-bottom: 2px solid #222;
+        }
+
+        .footer-section-title em {
+            font-style: normal;
+            color: var(--accent);
+        }
+
         /* ─── RESPONSIVE ───────────────────────────────────────── */
         @media (max-width: 960px) {
             .quienes-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -1018,26 +1054,26 @@
 
     <div class="container">
         <div class="hero-content">
-            <div class="hero-eyebrow fade-up">Consultoría de análisis empresarial</div>
+            <div class="hero-eyebrow fade-up">Especialistas en transformación digital</div>
 
             <h1 class="hero-headline fade-up d1">
                 NEX<span class="dash">—</span><br>DRIVE
             </h1>
 
             <p class="hero-subhead fade-up d2">
-                <strong>Transformamos el interior de tu empresa</strong> en resultados concretos y medibles. Diagnóstico profundo, soluciones reales.
+                <strong>Llevamos tu empresa a la era digital.</strong> Tecnología, automatización e inteligencia artificial al servicio de tu negocio.
             </p>
 
             <div class="hero-cta-row fade-up d3">
                 <a href="#servicios" class="btn btn-yellow">
-                    Conocé cómo trabajamos
+                    Conocé nuestros servicios
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2.5"
                          stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                 </a>
-                <a href="#quienes" class="btn btn-ghost">Sobre nosotros</a>
+                <a href="#quienes" class="btn btn-ghost">Quiénes somos</a>
             </div>
 
             <div class="hero-kpis fade-up d4">
@@ -1046,8 +1082,8 @@
                     <div class="kpi-lbl">Soluciones<br>a medida</div>
                 </div>
                 <div>
-                    <div class="kpi-val">360°</div>
-                    <div class="kpi-lbl">Análisis<br>organizacional</div>
+                    <div class="kpi-val">4.0</div>
+                    <div class="kpi-lbl">Tecnología<br>aplicada</div>
                 </div>
                 <div>
                     <div class="kpi-val">+10</div>
@@ -1068,12 +1104,12 @@
 
             <div class="quienes-body">
                 <span class="section-label fade-up">Quiénes somos</span>
-                <h2 class="section-title fade-up d1">Impulsamos el cambio desde adentro</h2>
+                <h2 class="section-title fade-up d1">Un equipo nacido en la era digital</h2>
                 <p class="fade-up d2">
-                    NEX-DRIVE es una consultora especializada en el análisis profundo de las funciones internas de las empresas, identificando ineficiencias y detectando oportunidades de mejora.
+                    Somos un equipo joven de consultores especializados en transformación digital. Nacimos con la convicción de que toda empresa —sin importar su tamaño— puede y debe adaptarse a la era 4.0.
                 </p>
                 <p class="fade-up d3">
-                    Acompañamos a las organizaciones en su proceso de transformación con soluciones concretas y medibles, adaptadas a la realidad y el contexto de cada cliente.
+                    Combinamos conocimiento tecnológico con visión estratégica para acompañar a nuestros clientes en cada etapa del cambio: desde el diagnóstico inicial hasta la implementación concreta de soluciones digitales.
                 </p>
             </div>
 
@@ -1082,12 +1118,13 @@
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"
                              stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M6 20v-2a6 6 0 0 1 12 0v2"/>
                         </svg>
                     </div>
                     <div>
-                        <div class="pillar-title">Diagnóstico estratégico</div>
-                        <div class="pillar-text">Analizamos cada organización en profundidad antes de proponer cualquier solución.</div>
+                        <div class="pillar-title">Nativos digitales</div>
+                        <div class="pillar-text">No explicamos la tecnología desde afuera — la vivimos, la usamos y la implementamos todos los días.</div>
                     </div>
                 </div>
 
@@ -1095,13 +1132,12 @@
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"
                              stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
-                            <polyline points="16 7 22 7 22 13"/>
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
                     </div>
                     <div>
-                        <div class="pillar-title">Resultados medibles</div>
-                        <div class="pillar-text">Definimos indicadores claros para que veas el impacto real de cada mejora implementada.</div>
+                        <div class="pillar-title">Comprometidos con el resultado</div>
+                        <div class="pillar-text">No somos consultores de presentaciones. Nos comprometemos hasta que el cambio es real y medible.</div>
                     </div>
                 </div>
 
@@ -1109,15 +1145,13 @@
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"
                              stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.04"/>
+                            <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-1.04"/>
                         </svg>
                     </div>
                     <div>
-                        <div class="pillar-title">Acompañamiento real</div>
-                        <div class="pillar-text">No entregamos informes y nos vamos. Estamos presentes en todo el proceso de transformación.</div>
+                        <div class="pillar-title">Soluciones a medida</div>
+                        <div class="pillar-text">Cada empresa es única. No usamos plantillas — diseñamos la transformación que se ajusta a tu realidad.</div>
                     </div>
                 </div>
 
@@ -1125,12 +1159,14 @@
                     <div class="pillar-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"
                              stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            <path d="M2 12h20"/>
                         </svg>
                     </div>
                     <div>
-                        <div class="pillar-title">Excelencia en cada proyecto</div>
-                        <div class="pillar-text">Máxima dedicación sin importar la escala de la organización o la complejidad del desafío.</div>
+                        <div class="pillar-title">Visión global, acción local</div>
+                        <div class="pillar-text">Aplicamos estándares internacionales de tecnología adaptados a la realidad y el contexto de cada organización.</div>
                     </div>
                 </div>
             </div>
@@ -1230,11 +1266,11 @@
 <section id="casos">
     <div class="container">
 
-        <div class="casos-head">
+        <div class="casos-head head-left">
             <span class="section-label fade-up">Casos de trabajo</span>
             <h2 class="section-title fade-up d1">Lo que hacemos en acción</h2>
             <p class="section-lead fade-up d2">
-                Explorá ejemplos concretos de cómo acompañamos a las organizaciones en su proceso de transformación.
+                Explorá ejemplos concretos de cómo llevamos empresas a la era digital.
             </p>
         </div>
 
@@ -1349,12 +1385,13 @@
 ════════════════════════════════════ -->
 <footer id="contacto">
     <div class="container">
+        <div class="footer-section-title">Hablemos de tu<em> transformación digital</em></div>
         <div class="footer-grid">
             <div>
                 <div class="footer-brand-name">NEX<em>-</em>DRIVE</div>
                 <p class="footer-tagline">
-                    Consultoría especializada en análisis y optimización empresarial.<br>
-                    Transformamos procesos en resultados medibles.
+                    Especialistas en transformación digital.<br>
+                    Llevamos tu empresa a la era 4.0.
                 </p>
             </div>
             <div>
@@ -1370,15 +1407,14 @@
             <div>
                 <div class="footer-col-title">Contacto</div>
                 <ul class="footer-links">
-                    <!-- Actualizá con datos de contacto reales -->
                     <li><a href="mailto:ikierjoffe@udesa.edu.ar">ikierjoffe@udesa.edu.ar</a></li>
-                    <li><a href="tel:+5491122676824">911 2267-6824</a></li>
+                    <li><a href="https://wa.me/5491122676824" target="_blank" rel="noopener">911 2267-6824 (WhatsApp)</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <span class="footer-copy">© 2025 NEX-DRIVE. Todos los derechos reservados.</span>
-            <span class="footer-copy">Consultoría de Análisis Empresarial</span>
+            <span class="footer-copy">© 2026 NEX-DRIVE. Todos los derechos reservados.</span>
+            <span class="footer-copy">Transformación Digital · Era 4.0</span>
         </div>
     </div>
 </footer>
